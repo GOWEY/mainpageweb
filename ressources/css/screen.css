@@ -35,3 +35,26 @@ html {
     border-radius: 1rem;
     margin-bottom: 3rem
 }
+
+.boutons {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 0px 0px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.bouton {
+    margin-top: 3rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    padding: 1rem;
+    background-color: green;
+    border-radius: 1rem;
+}
+
+.bouton:hover {
+    transition: 0.5s;
+    transform: scale(1.01);
+}

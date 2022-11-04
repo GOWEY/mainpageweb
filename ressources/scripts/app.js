@@ -15,6 +15,8 @@ var listPage = new Array()
 
 var compteurPage = -1
 
+var numPage = 0
+
 const apps = document.getElementById(`apps`);
 
 for (let i = 0; i < listApp.length; i++) {
@@ -42,3 +44,27 @@ function removePage() {
         a = apps.lastElementChild
     }
 }
+
+printPage(numPage)
+
+function pageUp() {
+    if (numPage < listPage.length-1) {
+        numPage = numPage + 1
+        removePage()
+        printPage(numPage)
+    }
+}
+
+function pageDown() {
+    if (numPage != 0) {
+        numPage = numPage - 1
+        removePage()
+        printPage(numPage)
+    }
+}
+
+var left = document.getElementById('backward')
+left.addEventListener('click',pageDown)
+
+var right = document.getElementById('forward')
+right.addEventListener('click',pageUp)
