@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="ressources/css/screen.css">
+    <script async src="https://cse.google.com/cse.js?cx=d72997cab5dd57970"></script>
+    <title>Home</title>
+</head>
+<body>
+<div class="screen">
+
+    <div id="header"></div>
+
+    <div class="apps" id="apps"></div>
+
+    <div id="boutons">
+        <a href="#" class="bouton" id="forward"></a>
+        <a href="#" class="bouton" id="backward"></a>
+    </div>
+
+</div>
+</body>
+<script src="ressources/scripts/app.js"></script>
+<script>
+    printPage(0)
+    var header = document.getElementById('header')
+    var time = document.createElement('div')
+    time.setAttribute('id','time')
+    header.appendChild(time)
+</script>
+<script src="ressources/scripts/time.js"></script>
+</html>
+<!--<script>setInterval(function(){location.reload(true);}, 2000);</script>

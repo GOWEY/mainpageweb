@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Saira', sans-serif;
+}
+
+.screen {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.apps {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0px 0px;
+}
+
+.app {
+    padding: 4rem;
+    border-radius: 1rem;
+    background-color: red;
+    margin: 2rem;
+}
+
+#header {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    padding: 2rem;
+    background-color: #ff0000;
+    border-radius: 1rem;
+    margin-bottom: 3rem
+}
