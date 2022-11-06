@@ -1,5 +1,5 @@
 var listApp = [
-    ['youtube', 'https://www.youtube.com/'],
+    ['PiHole', 'http://192.168.1.43/admin/index.php'],
     ['google', 'https://www.google.com/'],
     ['test', '#'],
     ['test', '#'],
@@ -19,6 +19,8 @@ var numPage = 0
 
 const apps = document.getElementById(`apps`);
 
+const boutons = document.getElementsByClassName('boutons')[0]
+
 for (let i = 0; i < listApp.length; i++) {
     if (i%9 == 0) {
         compteurPage = compteurPage + 1
@@ -28,7 +30,24 @@ for (let i = 0; i < listApp.length; i++) {
     div.setAttribute('class', 'app')
     div.setAttribute('id', listApp[i][0])
     div.setAttribute('href', listApp[i][1])
+    div.appendChild(document.createTextNode(listApp[i][0].toUpperCase()))
     listPage[compteurPage].push(div)
+}
+
+function creeBoutonUp() {
+    var boutonUp = document.createElement('div')
+    boutonUp.setAttribute('class','bouton')
+    boutonUp.setAttribute('id','forward')
+    boutonUp.appendChild(document.createTextNode('Suivant'))
+    boutons.appendChild(boutonUp)
+}
+
+function creeBoutonDown() {
+    var boutonDown = document.createElement('div')
+    boutonDown.setAttribute('class','bouton')
+    boutonDown.setAttribute('id','backward')
+    boutonDown.appendChild(document.createTextNode('Précedent'))
+    boutons.appendChild(boutonDown)
 }
 
 function printPage(numPage) {
@@ -45,7 +64,6 @@ function removePage() {
     }
 }
 
-printPage(numPage)
 
 function pageUp() {
     if (numPage < listPage.length-1) {
@@ -63,8 +81,13 @@ function pageDown() {
     }
 }
 
+creeBoutonDown()
+creeBoutonUp()
+printPage(numPage)
+
 var left = document.getElementById('backward')
 left.addEventListener('click',pageDown)
 
 var right = document.getElementById('forward')
 right.addEventListener('click',pageUp)
+

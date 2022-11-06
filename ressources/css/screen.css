@@ -4,11 +4,16 @@ html {
     margin: 0;
     padding: 0;
     font-family: 'Saira', sans-serif;
+    background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+
+
 }
 
 .screen {
     margin-left: 15%;
     margin-right: 15%;
+    padding-top: 1%;
+    padding-bottom: 1%;
 }
 
 .apps {
@@ -20,9 +25,15 @@ html {
 
 .app {
     padding: 4rem;
-    border-radius: 1rem;
-    background-color: red;
+    border-radius: 50px;
+    background-color: #00c9b7;
     margin: 2rem;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    box-shadow: 10px 10px 14px 1px rgb(0 0 0 / 20%);
+    letter-spacing: 0.094em;
+    transition: 0.5s;
 }
 
 #header {
@@ -31,10 +42,15 @@ html {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     gap: 0px 0px;
     padding: 2rem;
-    background-color: #ff0000;
+    background-color: #A8EB12;
+    color: rgb(34, 34, 34);
     border-radius: 1rem;
-    margin-bottom: 3rem
+    margin-bottom: 3rem;
+    box-shadow: 10px 10px 14px 1px rgb(0 0 0 / 20%);
+    letter-spacing: 0.094em;
+    font-size: 30px;
 }
+
 
 .boutons {
     display: grid;
@@ -50,11 +66,23 @@ html {
     margin-right: 1rem;
     margin-left: 1rem;
     padding: 1rem;
-    background-color: green;
+    background: #051937;
+    color: rgb(221, 221, 221);
     border-radius: 1rem;
+    box-shadow: 10px 10px 14px 1px rgb(0 0 0 / 20%);
+    letter-spacing: 0.094em;
+    text-align: center;
+    transition: 0.5s;
 }
 
 .bouton:hover {
     transition: 0.5s;
-    transform: scale(1.01);
+    transform: scale(1.025);
+    box-shadow: 15px 15px 19px 1px rgb(0 0 0 / 20%);
+}
+
+.app:hover {
+    transition: 0.5s;
+    transform: scale(1.025);
+    box-shadow: 15px 15px 19px 1px rgb(0 0 0 / 20%);
 }
