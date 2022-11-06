@@ -1,14 +1,38 @@
 var listApp = [
     ['PiHole', 'http://192.168.1.43/admin/index.php'],
-    ['google', 'https://www.google.com/'],
-    ['test', '#'],
-    ['test', '#'],
-    ['test', '#'],
-    ['test', '#'],
-    ['test', '#'],
-    ['test', '#'],
-    ['test', '#'],
-    ['test', '#']
+    ['Nextcloud', 'http://192.168.1.43/nextcloud/'],
+    ['ye', 'http://192.168.1.43/admin/index.php'],
+    ['Nextcloud', 'http://192.168.1.43/nextcloud/'],
+    ['ye', 'http://192.168.1.43/admin/index.php'],
+    ['Nextcloud', 'http://192.168.1.43/nextcloud/'],
+    ['ye', 'http://192.168.1.43/admin/index.php'],
+    ['Nextcloud', 'http://192.168.1.43/nextcloud/'],
+    ['ye', 'http://192.168.1.43/admin/index.php'],
+    ['Nextcloud', 'http://192.168.1.43/nextcloud/'],
+    ['ye', 'http://192.168.1.43/admin/index.php'],
+    ['Nextcloud', 'http://192.168.1.43/nextcloud/'],
+    ['ye', 'http://192.168.1.43/admin/index.php'],
+    ['Nextcloud', 'http://192.168.1.43/nextcloud/'],
+    ['PiHole', 'http://192.168.1.43/admin/index.php'],
+    ['Nextcloud', 'http://192.168.1.43/nextcloud/'],
+    ['PiHole', 'http://192.168.1.43/admin/index.php'],
+    ['Nextcloud', 'http://192.168.1.43/nextcloud/'],
+    ['PiHole', 'http://192.168.1.43/admin/index.php'],
+    ['Nextcloud', 'http://192.168.1.43/nextcloud/'],
+    ['PiHole', 'http://192.168.1.43/admin/index.php'],
+    ['Nextcloud', 'http://192.168.1.43/nextcloud/'],
+    ['PiHole', 'http://192.168.1.43/admin/index.php'],
+    ['Nextcloud', 'http://192.168.1.43/nextcloud/'],
+    ['PiHole', 'http://192.168.1.43/admin/index.php'],
+    ['Nextcloud', 'http://192.168.1.43/nextcloud/'],
+    ['PiHole', 'http://192.168.1.43/admin/index.php'],
+    ['Nextcloud', 'http://192.168.1.43/nextcloud/'],
+    ['PiHole', 'http://192.168.1.43/admin/index.php'],
+    ['Nextcloud', 'http://192.168.1.43/nextcloud/'],
+    ['PiHole', 'http://192.168.1.43/admin/index.php'],
+    ['Nextcloud', 'http://192.168.1.43/nextcloud/'],
+    ['PiHole', 'http://192.168.1.43/admin/index.php'],
+    ['Nextcloud', 'http://192.168.1.43/nextcloud/']
     ]
 
 var listPage = new Array()
@@ -66,24 +90,62 @@ function removePage() {
 
 
 function pageUp() {
+    if (numPage == 0) {
+        var left = document.getElementById('backward')
+        left.style.removeProperty('width')
+        left.style.padding = '1rem'
+        left.style.removeProperty('font-size')
+    }
     if (numPage < listPage.length-1) {
         numPage = numPage + 1
         removePage()
         printPage(numPage)
     }
+    if (numPage == listPage.length-1) {
+        var left = document.getElementById('forward')
+        left.style.width = '0px'
+        left.style.padding = '0px'
+        left.style.fontSize = '0px'
+    }
 }
 
 function pageDown() {
+    if (numPage == listPage.length-1) {
+        var left = document.getElementById('forward')
+        left.style.removeProperty('width')
+        left.style.padding = '1rem'
+        left.style.removeProperty('font-size')
+    }
     if (numPage != 0) {
         numPage = numPage - 1
         removePage()
         printPage(numPage)
     }
+    if (numPage == 0) {
+        var left = document.getElementById('backward')
+        left.style.width = '0px'
+        left.style.padding = '0px'
+        left.style.fontSize = '0px'
+    }
 }
 
-creeBoutonDown()
 creeBoutonUp()
+creeBoutonDown()
 printPage(numPage)
+
+if (numPage == 0) {
+    var left = document.getElementById('backward')
+    left.style.width = '0px'
+    left.style.padding = '0px'
+    left.style.fontSize = '0px'
+}
+
+if (numPage == listPage.length-1) {
+    var left = document.getElementById('forward')
+    left.style.width = '0px'
+    left.style.padding = '0px'
+    left.style.fontSize = '0px'
+}
 
 var left = document.getElementById('backward')
 left.addEventListener('click',pageDown)
