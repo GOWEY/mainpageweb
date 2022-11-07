@@ -5,8 +5,7 @@ html {
     padding: 0;
     font-family: 'Saira', sans-serif;
     /*background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);*/
-
-
+    background-color: #2d2d2d;
 }
 
 .screen {
@@ -23,10 +22,19 @@ html {
     gap: 0px 0px;
 }
 
+@media (max-width: 1350px) {
+    .apps{
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 0px 0px;
+    }
+}
+
 .app {
     padding: 4rem;
     border-radius: 50px;
-    background-color: #00c9b7;
+    background-color: #00a666;
     margin: 2rem;
     text-align: center;
     color: rgb(255, 255, 255);
@@ -42,7 +50,7 @@ html {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     gap: 0px 0px;
     padding: 2rem;
-    background-color: #A8EB12;
+    background-color: #d9d9d9;
     color: rgb(34, 34, 34);
     border-radius: 1rem;
     margin-bottom: 3rem;

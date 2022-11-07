@@ -45,8 +45,13 @@ const apps = document.getElementById(`apps`);
 
 const boutons = document.getElementsByClassName('boutons')[0]
 
+var nbApp = 9
+
+var x = window.matchMedia("(max-width: 1350px)")
+
+
 for (let i = 0; i < listApp.length; i++) {
-    if (i%9 == 0) {
+    if (i%nbApp === 0) {
         compteurPage = compteurPage + 1
         listPage[compteurPage] = new Array()
     }
@@ -90,7 +95,7 @@ function removePage() {
 
 
 function pageUp() {
-    if (numPage == 0) {
+    if (numPage === 0) {
         var left = document.getElementById('backward')
         left.style.removeProperty('width')
         left.style.padding = '1rem'
@@ -101,7 +106,7 @@ function pageUp() {
         removePage()
         printPage(numPage)
     }
-    if (numPage == listPage.length-1) {
+    if (numPage === listPage.length-1) {
         var left = document.getElementById('forward')
         left.style.width = '0px'
         left.style.padding = '0px'
@@ -110,18 +115,18 @@ function pageUp() {
 }
 
 function pageDown() {
-    if (numPage == listPage.length-1) {
+    if (numPage === listPage.length-1) {
         var left = document.getElementById('forward')
         left.style.removeProperty('width')
         left.style.padding = '1rem'
         left.style.removeProperty('font-size')
     }
-    if (numPage != 0) {
+    if (numPage !== 0) {
         numPage = numPage - 1
         removePage()
         printPage(numPage)
     }
-    if (numPage == 0) {
+    if (numPage === 0) {
         var left = document.getElementById('backward')
         left.style.width = '0px'
         left.style.padding = '0px'
@@ -133,14 +138,14 @@ creeBoutonUp()
 creeBoutonDown()
 printPage(numPage)
 
-if (numPage == 0) {
+if (numPage === 0) {
     var left = document.getElementById('backward')
     left.style.width = '0px'
     left.style.padding = '0px'
     left.style.fontSize = '0px'
 }
 
-if (numPage == listPage.length-1) {
+if (numPage === listPage.length-1) {
     var left = document.getElementById('forward')
     left.style.width = '0px'
     left.style.padding = '0px'
@@ -152,4 +157,3 @@ left.addEventListener('click',pageDown)
 
 var right = document.getElementById('forward')
 right.addEventListener('click',pageUp)
-
