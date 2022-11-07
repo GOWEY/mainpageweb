@@ -41,7 +41,7 @@ html {
     text-decoration: none;
     box-shadow: 10px 10px 14px 1px rgb(0 0 0 / 20%);
     letter-spacing: 0.094em;
-    transition: 0.5s;
+    transition: 250ms;
 }
 
 #header {
@@ -59,6 +59,27 @@ html {
     font-size: 30px;
 }
 
+.google div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.googleButton {
+    border-radius: 50px;
+    border: none;
+    padding: 0.5rem;
+}
+
+#googleText {
+    margin-right: 0.5rem;
+    width: 15rem;
+    font-size: 1.5rem;
+}
+
+#googleSubmit {
+    margin-left: 0.5rem;
+}
 
 .boutons {
     display: grid;
@@ -72,6 +93,7 @@ html {
 }
 
 .bouton {
+    text-decoration: none;
     margin-top: 3rem;
     margin-right: 1rem;
     margin-left: 1rem;
@@ -93,16 +115,16 @@ html {
     grid-area: backward;
 }
 
-/*
+
 .bouton:hover {
-    transition: 0.5s;
+    transition: 250ms;
     transform: scale(1.025);
     box-shadow: 15px 15px 19px 1px rgb(0 0 0 / 20%);
 }
-*/
+
 
 .app:hover {
-    transition: 0.5s;
+    transition: 250ms;
     transform: scale(1.025);
     box-shadow: 15px 15px 19px 1px rgb(0 0 0 / 20%);
 }

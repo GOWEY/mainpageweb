@@ -64,17 +64,19 @@ for (let i = 0; i < listApp.length; i++) {
 }
 
 function creeBoutonUp() {
-    var boutonUp = document.createElement('div')
+    var boutonUp = document.createElement('a')
     boutonUp.setAttribute('class','bouton')
     boutonUp.setAttribute('id','forward')
+    boutonUp.setAttribute('href','#')
     boutonUp.appendChild(document.createTextNode('Suivant'))
     boutons.appendChild(boutonUp)
 }
 
 function creeBoutonDown() {
-    var boutonDown = document.createElement('div')
+    var boutonDown = document.createElement('a')
     boutonDown.setAttribute('class','bouton')
     boutonDown.setAttribute('id','backward')
+    boutonDown.setAttribute('href','#')
     boutonDown.appendChild(document.createTextNode('Précedent'))
     boutons.appendChild(boutonDown)
 }
